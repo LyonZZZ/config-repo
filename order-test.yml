@@ -27,7 +27,7 @@ eureka:
 
 girl:
   name: lyon
-  age: 99
+  age: 100
     
 #要访问的应用(负载均衡规则)
 #PRODUCT:
