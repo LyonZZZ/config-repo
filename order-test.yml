@@ -1,4 +1,4 @@
-env: test
+env: test0
 
 #order-test.yml对应的就是spring.application.name和cloud.config.profile的值
 spring:
