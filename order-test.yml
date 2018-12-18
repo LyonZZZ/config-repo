@@ -1,0 +1,35 @@
+env: test
+
+#order-test.yml对应的就是spring.application.name和cloud.config.profile的值
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  cloud:
+    config:
+      discovery:
+        service-id: config
+        enabled: true
+      profile: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: 127.0.0.1:${server.port}
+
+girl:
+  name: lyon
+  age: 28
+    
+#要访问的应用(负载均衡规则)
+#PRODUCT:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
