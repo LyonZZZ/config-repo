@@ -1,4 +1,4 @@
-env: test0
+env: test
 
 #order-test.yml对应的就是spring.application.name和cloud.config.profile的值
 spring:
@@ -27,7 +27,7 @@ eureka:
 
 girl:
   name: lyon
-  age: 101
+  age: 28
     
 #要访问的应用(负载均衡规则)
 #PRODUCT:
